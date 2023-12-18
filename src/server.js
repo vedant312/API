@@ -7,7 +7,7 @@ import mainRoute from './main.routes';
 import userRoutes from './user.routes';
 
 const app = express();
-const port = 3000;
+const port = 4000;
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minutes
   limit: 12, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
