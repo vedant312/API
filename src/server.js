@@ -1,7 +1,7 @@
 import express from 'express';
 import helmet from 'helmet';
 import { rateLimit } from 'express-rate-limit';
-import compression from 'compression';
+import compression from 'express-compression';
 
 import mainRoute from './main.routes';
 import userRoutes from './user.routes';
