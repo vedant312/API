@@ -28,8 +28,13 @@ test('Must add a user', (t) => {
 
 test('Must get all user', (t) => {
   const expectedId = 1;
+
+  userService.addUser(updatedUser);
   const response = userService.getAllUser();
-  t.deepEqual(response[0], { id: expectedId, ...sampleUser });
+  t.deepEqual(response, [
+    { id: 1, ...sampleUser },
+    { id: 2, ...updatedUser },
+  ]);
 });
 
 test('Must retrieve a user', (t) => {
